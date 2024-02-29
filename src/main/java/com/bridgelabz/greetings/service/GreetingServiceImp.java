@@ -35,7 +35,7 @@ public class GreetingServiceImp implements GreetingService {
 //                return greet;
 //            }
 //        }
-        return greetingsDao.getReferenceById(id);
+        return greetingsDao.findById(id).orElse(null);
     }
 
     @Override
